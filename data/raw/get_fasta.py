@@ -1,7 +1,7 @@
 
 from Bio import Entrez
 
-Entrez.email = "moulighosh2882003@gmail.com"
+Entrez.email = "amazingsuraj101@gmail.com"
 
 # 3. Set your search query and output file name
 # You can change this to download data for other viruses.
