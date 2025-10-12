@@ -6,19 +6,15 @@ from io import StringIO
 from Bio import SeqIO
 import random
 
+Entrez.email = "moulighosh2882003@gmail.com" 
 
-# --- Parameters (Configure your project here) ---
 
-# 1. Provide your email for NCBI access
-Entrez.email = "moulighosh2882003@gmail.com" # Please change this to your email
-
-# 2. Set the maximum number of genes to download for each virus
 MAX_RECORDS_PER_VIRUS = 9000
 TARGET_SEQUENCES_PER_VIRUS = 4000
-# 3. Quality control: discard sequences with more than this percentage of 'N's.
-MAX_N_PERCENTAGE = 3.0 # (e.g., 5.0 means max 5% of the sequence can be 'N')
 
-# 4. Central configuration with a more flexible search query
+MAX_N_PERCENTAGE = 3.0 
+
+# Central configuration with a more flexible search query
 VIRUS_CONFIG = {
     "SARS-CoV-2": {
         "gene_name": "S",
@@ -51,7 +47,7 @@ VIRUS_CONFIG = {
         "min_length": 1600  # H gene is ~1800 nt
     }}
 
-# --- Main Script ---
+
 
 for virus_name, config in VIRUS_CONFIG.items():
     gene_name = config['gene_name']
@@ -123,7 +119,7 @@ for virus_name, config in VIRUS_CONFIG.items():
         print(f"✅ Successfully saved {len(final_records_to_save)} sequences to '{output_file}'")
 
     except Exception as e:
-        print(f"❌ An error occurred while processing {virus_name}: {e}")
+        print(f"An error occurred while processing {virus_name}: {e}")
 
     time.sleep(1)
 

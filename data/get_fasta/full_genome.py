@@ -7,46 +7,23 @@ MAX_RECORDS_PER_VIRUS = 9000
 
 # Central configuration dictionary with virus-specific length ranges
 VIRUS_CONFIG = {
-     "SARS-CoV-2": {
-        "filename": "sars_cov_2_genomes.fasta",
-        "length_range": "29000:31000"
-    },
-    "Human immunodeficiency virus 1": {
-        "filename": "hiv_1_genomes.fasta",
-        "length_range": "9000:11000"
-    },
+     
     "Dengue virus": {
         "filename": "dengue_virus_genomes.fasta",
         "length_range": "10000:12000"
     },
-    "Zaire ebolavirus": {
-        "filename": "zaire_ebolavirus_genomes.fasta",
-        "length_range": "18000:20000"  
-    }, 
 
   
     "Hepatitis C virus": {
         "filename": "hepatitis_c_genomes.fasta",
         "length_range": "8500:11500"
     },
-    "Hepatitis B virus": {
-        "filename": "hepatitis_b_genomes.fasta",
-        "length_range": "3000:3400"
-    },
    
     "Measles morbillivirus": {
         "filename": "measles_virus_genomes.fasta",
         "length_range": "15000:16000"  # ~15.9kb genome
-    },
-   
-    "Zika virus": {
-        "filename": "zika_virus_genomes.fasta",
-        "length_range": "10000:11000"  # ~10.8kb genome
-    },
-    "Chikungunya virus": {
-        "filename": "chikungunya_virus_genomes.fasta",
-        "length_range": "11000:12000"  # ~11.8kb genome
     }
+
 }
 
 # --- Main Script ---
